@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: gateway
+server:
+  port: 8080
+zuul:
+  routes:
+    person-service:
+      path: /person/**
+eureka:
+  client:
+    serviceUrl:
+      defaulZone: http://localhost:8761/eureka
