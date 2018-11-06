@@ -8,21 +8,21 @@ The app consists out of 3 services
 - gateway
 - person-service
 
-The link element in the REST response contains the host name instead of the gateway base path
+The link element in the REST response contains the correct host name of the gateway
 
 ```
 curl "http://localhost:8080/person"
 ```
 
 ```
-    {
+ {
   "_links" : {
     "persons" : {
-      "href" : "http://10.242.135.37:8081/persons{?page,size,sort}",
+      "href" : "http://localhost:8080/person/persons{?page,size,sort}",
       "templated" : true
     },
     "profile" : {
-      "href" : "http://10.242.135.37:8081/profile"
+      "href" : "http://localhost:8080/person/profile"
     }
   }
 }
