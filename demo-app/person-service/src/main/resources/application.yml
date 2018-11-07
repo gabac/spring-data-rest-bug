@@ -3,6 +3,7 @@ spring:
     name: person-service
 server:
   port: 8081
+  use-forward-headers: true
 eureka:
   client:
     serviceUrl:

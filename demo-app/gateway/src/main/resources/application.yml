@@ -3,6 +3,7 @@ spring:
     name: gateway
 server:
   port: 8080
+  use-forward-headers: true
 zuul:
   routes:
     person-service:
